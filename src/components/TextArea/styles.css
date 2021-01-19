@@ -1,0 +1,21 @@
+.textarea {
+    width: 95%;
+    height: 95%;
+
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.textarea-text {
+    margin: 10px;
+
+    height: 95%;
+
+    white-space: normal;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
