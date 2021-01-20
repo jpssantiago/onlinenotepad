@@ -1,13 +1,7 @@
 import React from 'react';
 import './styles.css';
 
-function Control({ icon, text, special, action, callback, updateData }) {
-
-    function requestData() {
-        const data = callback();
-        const response = handleData(data);
-        updateData(response);
-    }
+function Control({ icon, text, special, action, getData, sendResponse }) {
 
     function alternateCases(s) {
         let chars = s.toLowerCase().split("");
@@ -21,32 +15,39 @@ function Control({ icon, text, special, action, callback, updateData }) {
         return s.charAt(0).toUpperCase() + s.slice(1).toLowerCase();
     } 
 
-    function handleData(data) {
+    function handleClick() {
+        let response = '';
         switch (action) {
             case "capitalize":
-                return capitalize(data);
+                response = capitalize(getData);
+                break;
             case "uppercase":
-                return data.toUpperCase();
+                response = getData.toUpperCase();
+                break;
             case "lowercase":
-                return data.toLowerCase();
+                response = getData.toLowerCase();
+                break;
             case "alternating":
-                return alternateCases(data);
+                response = alternateCases(getData);
+                break;
 
             default:
                 break;
         }
+
+        sendResponse(response);
     }
 
     if (icon) {
         return (
-            <button onClick={requestData} className={`control ${special ? "special" : ""}`}>
+            <button onClick={handleClick} className={`control ${special ? "special" : ""}`}>
                 <i className={icon}></i>
             </button>
         );
     }
 
     return (
-        <button onClick={requestData} className={`control ${special ? "special" : ""}`}>
+        <button onClick={handleClick} className={`control ${special ? "special" : ""}`}>
             <h1>{text}</h1>
         </button>
     );

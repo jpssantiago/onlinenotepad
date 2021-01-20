@@ -3,6 +3,13 @@
   padding: 0;
 }
 
+body {
+  min-width:330px;
+  width: auto !important;
+  
+  min-height: 370px;
+}
+
 .App {
   background-color: #282c34; 
 

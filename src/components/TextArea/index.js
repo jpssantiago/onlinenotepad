@@ -1,22 +1,11 @@
-import React, { useState , useEffect} from 'react';
+import React from 'react';
 import './styles.css'
 
-function TextArea({ callback, newState }) {
-    const [state, setState] = useState('');
-
-    function handleChange(e) {
-        setState(e.target.value);
-        callback(state);
-    }
-
-    useEffect(() => {
-        setState(newState);
-    }, [newState]);
-
+function TextArea({ setData, getData }) {
     return (
         <div className="textarea">
             <div className="textarea-text">
-                <textarea onChange={handleChange} value={state} type="text" />
+                <textarea onChange={e => setData(e.target.value)} value={getData} type="text" />
             </div>
         </div>
     );
