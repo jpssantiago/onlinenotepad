@@ -13,4 +13,11 @@
     border-radius: 5px;
 
     cursor: pointer;
+
+}
+
+.sharebutton:hover {
+    background: rgb(1, 69, 138);
+
+    transition: all .2s ease-in-out;
 }

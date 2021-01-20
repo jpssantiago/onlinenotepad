@@ -13,6 +13,24 @@
     cursor: pointer;
 }
 
-/*
-background-color: #282c34; 
-*/
+.control img {
+    height: 34px;
+    width: 34px;
+
+    color: white;
+}
+
+.control h1 {
+    font-family: "Arial";
+    font-size: 24px;
+}
+
+.special {
+    width: 100px;
+}
+
+.control:hover {
+    background-color: #282c34; 
+
+    transition: all .2s ease-in-out;
+}

@@ -25,14 +25,14 @@
 }
 
 .container-controls-area {
-    margin: 30px;
+    margin-left: 30px;
 }
 
 .container-controls-sharebutton {
     display: flex;
     justify-content: flex-end;
 
-    width: 32%;
+    width: 73%;
 }
 
 .container-textarea {
