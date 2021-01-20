@@ -1,9 +1,9 @@
 import React from 'react';
 import './styles.css';
 
-function ShareButton() {
+function ShareButton({ onClick }) {
     return (
-        <button className="sharebutton">Share</button>
+        <button onClick={onClick} className="sharebutton">Share</button>
     );
 }
 

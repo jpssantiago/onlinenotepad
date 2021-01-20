@@ -4,14 +4,20 @@ import './styles.css';
 import Control from '../Control';
 import TextArea from '../TextArea';
 import ShareButton from '../ShareButton';
+import Popup from '../Popup';
 
 function Container() {
 
     const [state, setState] = useState('');
+    const [popup, setPopup] = useState(false);
 
     function handleChange(data) {
         setState(data);
-    }    
+    } 
+    
+    function togglePopup() {
+        setPopup(!popup);
+    }
 
     return (
         <div className="container">
@@ -24,13 +30,15 @@ function Container() {
                 </div>
 
                 <div className="container-controls-sharebutton">
-                    <ShareButton />
+                    <ShareButton onClick={togglePopup} />
                 </div>
             </div>
             
             <div className="container-textarea">
                 <TextArea setData={handleChange} getData={state} />
             </div>
+
+            { popup && <Popup togglePopup={togglePopup} /> }
         </div>
     );
 }

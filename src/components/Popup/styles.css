@@ -1,0 +1,101 @@
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+
+    background-color: rgba(0,0,0, 0.5);
+}
+
+.popup-inner {
+    position: absolute;
+    width: 500px;
+    height: 250px;
+
+    left: 25%;
+    right: 25%;
+    top: 25%;
+    bottom: 25%;
+    margin: auto;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    border: 1px solid white;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #282C34;
+}
+
+.popup-inner-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.popup-inner-header i {
+    margin: 20px;
+
+    cursor: pointer;
+}
+
+.popup-inner-header h1 {
+    padding: 20px;
+    padding-bottom: 0;
+
+    font-size: 49px;
+    font-weight: normal;
+}
+
+.popup-inner p {
+    padding-left: 20px;
+    padding-top: 50px;
+      
+    color: #C5C5C5;
+    font-size: 20px;
+}
+
+.popup-inner-bottom input {
+    margin: 20px;
+    margin-top: 5px;
+    padding: 10px;
+
+    color: #C5C5C5;
+    background: #282C34;
+
+    font-size: 25px;
+
+    border: 1px solid #C5C5C5;
+    border-radius: 5px;
+}
+
+.popup-inner-bottom button {
+    padding: 10px;
+
+    font-size: 26px;
+    font-weight: normal;
+
+    width: 100px;
+
+    color: white;
+    background: #1E90FF;
+
+    border: 0;
+    border-radius: 5px;
+
+    cursor: pointer;
+    outline: none;
+}
+
+.popup-inner-bottom button:hover {
+    background: rgb(1, 69, 138);
+
+    transition: all .2s ease-in-out;
+}
