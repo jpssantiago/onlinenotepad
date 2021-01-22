@@ -1,7 +1,24 @@
 import React from 'react';
 import './styles.css';
 
-function Popup({ togglePopup }) {
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+function Popup({ togglePopup, url }) {
+    
+    const inputRef = React.createRef();
+
+    function handleClick() {
+        const input = inputRef.current;
+
+        input.select();
+
+        document.execCommand("copy");
+
+        toast.success('Link copied.');
+    }
+    
+    
     return (
         <div className="popup">
             <div className="popup-inner">
@@ -12,8 +29,8 @@ function Popup({ togglePopup }) {
 
                 <p>Link:</p>
                 <div className="popup-inner-bottom">
-                    <input type="text" value="https://www.google.com" disabled="disabled" />
-                    <button>Copy</button>
+                    <input type="text" value={`https://portablelevel.com/${url}`} ref={inputRef} readOnly />
+                    <button onClick={handleClick} >Copy</button>
                 </div>
             </div>
         </div>
