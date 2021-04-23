@@ -27,7 +27,6 @@ yarn start
 ## Images
 
 <img src="assets/readme_images/readme_image_0.png" alt="drawing" width="200"/>
-<img src="assets/readme_images/readme_image_1.png" alt="drawing" width="200"/>
 
 ## License
 [MIT](LICENSE)
